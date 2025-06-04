@@ -1,0 +1,13 @@
+name: HC
+channels:
+  - pytorch
+  - nvidia/label/cuda-11.8.0 # Critical for specific CUDA dependencies
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11 # Specify desired Python version
+  - pytorch # Conda will pick the best build based on channels/cuda specified
+  - pytorch-cuda=11.8 # Explicitly specifies CUDA version for PyTorch, pulls in cuda-toolkit, etc.
+  - torchvision # Will be consistent with pytorch and pytorch-cuda
+  - torchaudio # Will be consistent with pytorch and pytorch-cuda
+  - tqdm
